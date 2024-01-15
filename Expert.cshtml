@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Expert";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VROOT Phone</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- You Ouwn Scripts -->
+    <link rel="stylesheet" type="text/css" href="https://dtd6jl0d42sve.cloudfront.net/lib/dhtmlx/dhtmlx.css" />
+    <style>
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #theIframe {
+            width: 350px;
+            height: 640px;
+            border: 1px solid #000000;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="https://dtd6jl0d42sve.cloudfront.net/lib/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://dtd6jl0d42sve.cloudfront.net/lib/dhtmlx/dhtmlx.js"></script>
+    <script lang="javascript">
+        function OpenAsWindow() {
+            var windowsCollection = new dhtmlXWindows("material");
+            var windowObj = windowsCollection.createWindow("window", 0, 0, 350, 640);
+            windowObj.setText("VROOT Phone");
+            windowObj.allowResize();
+            windowObj.setModal(false);
+            windowObj.center();
+            windowObj.progressOn();
+            windowObj.attachEvent("onContentLoaded", function (win) {
+                win.progressOff();
+            });
+            windowObj.attachURL("/SIPML5/");
+            windowObj.show();
+        }
+        function OpenAsIframe() {
+            $("#theIframe").prop("src", "/SIPML5/");
+        }
+    </script>
+</head>
+<body>
+    <div id=content>
+        <p>This is a sample of how the phone can be loaded into you own web site.</p>
+        <p>
+            <button onclick="OpenAsWindow()">Open As Window</button>
+            <button onclick="OpenAsIframe()">Load into iframe</button>
+        </p>
+        <p>
+            <iframe id=theIframe></iframe>
+        </p>
+    </div>
+</body>
+</html>
