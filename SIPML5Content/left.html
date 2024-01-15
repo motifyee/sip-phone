@@ -1,0 +1,56 @@
+<div id="leftContent" style="float: left; height: 100%; width: 320px">
+	<table style="height: 100%; width: 100%" cellspacing="5;" cellpadding="0;">
+		<tr>
+			<td class="streamSection" style="height: 77px">
+				<!-- Profile User -->
+				<div class="profileContainer">
+					<div class="contact" id="UserProfile" style="margin-bottom: 5px">
+						<div id="UserProfilePic" class="buddyIcon"></div>
+						<span id="reglink" class="dotOffline"></span>
+						<span id="deregLink" class="dotOnline" style="display: none">
+							<i
+								class="fa fa-wifi"
+								style="line-height: 14px; text-align: center; display: block"
+							>
+							</i>
+						</span>
+						<span id="WebRtcFailed" class="dotFailed" style="display: none"
+							><i
+								class="fa fa-cross"
+								style="line-height: 14px; text-align: center; display: block"
+							></i
+						></span>
+						<div class="contactNameText" style="margin-right: 0px">
+							<i class="fa fa-phone-square"></i> <span id="UserDID"></span> -
+							<span id="UserCallID"></span>
+						</div>
+						<div class="presenceText" id="regStatus">&nbsp;</div>
+					</div>
+					<!-- Search / Add Buddies -->
+					<div style="padding-left: 5px">
+						<span class="searchClean"
+							><input
+								id="txtFindBuddy"
+								type="text"
+								autocomplete="none"
+								style="width: 160px"
+						/></span>
+						&nbsp;
+						<button id="BtnFreeDial"><i class="fa fa-phone"></i></button>
+						<button id="BtnAddSomeone"><i class="fa fa-user-plus"></i></button>
+						<button id="BtnCreateGroup">
+							<i class="fa fa-users"></i
+							><i class="fa fa-plus" style="font-size: 9px"></i>
+						</button>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<!-- Lines & Buddies -->
+		<tr>
+			<td class="streamSection">
+				<div id="myContacts" class="contactArea cleanScroller"></div>
+			</td>
+		</tr>
+	</table>
+</div>
